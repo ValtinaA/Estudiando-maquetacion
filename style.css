@@ -1,0 +1,124 @@
+.container {
+  display: flex;
+  height: 600px;
+  width: 600px;
+  /*Flex-direction:
+   Apila los elementos como si fuera una fila
+  flex-direction: row;
+  Apila los elementos de forma invertida pero en fila  
+  flex-direction: row-reverse;
+  Apila los elementos como si fuera una columna
+  flex-direction: column;
+  Apila los elementos como si fuera una columna invertida
+flex-direction: column-reverse;
+  */
+  /* Flex-wrap:
+  Los elementos van a tartar de apilarse en una misma linea
+  o no
+  flex-wrap: nowrap; 
+  Crea mas filas para que los elementos que se desborden
+  se hagan en una nueva fila
+  flex-wrap: wrap; 
+    Invierte el orden de como aparecen las filas
+    flex-wrap: wrap-reverse;
+  */
+  /* flex-wrap: wrap; */
+  /* Propiedad que simplifica flex-direction y flex-wrap
+  flex-flow:row wrap;
+  primero las propiedades de flex-direction y despues las propiedades
+  de flex-wrap
+   */
+  flex-flow: row wrap;
+  /* justify-content esta propiedad solo sirve en el main axis
+   Nos ayuda a alinear los elementos
+    flex-start se alinean a la izquierda
+    flex-end se alinean a la derecha
+    center se alinea al centro
+    space-between se alinean de forma uniforme con espacio entre ellos
+    space-around distribuye los elementos en el contenedor separandolo
+    tambien del contenedor
+    space-evenly se distribuyen a la misma distancia*/
+  /* justify-content: space-evenly; */
+  /* align-items dirve para alinear el cross axis los elementos 
+  deben de tener una altura height: y su altura(100px...)
+  flex-start se alinean en la parte superior del contenedor
+  flex-end se alinean en la parte inferior del contenedor
+  center se alinean en el centro
+  stretch los elementos ocupan todo el alto del contenedor(los elementos 
+  no deben tener altura definida)
+  baseline alinea los elementos verticalmente por donde este la linea
+  base del elemento osea donde este alineado el texto
+  */
+  /* align-items: stretch; */
+  /* align-content trabaja en el corss axis y debe tener flex-flow
+  en wrap o wrap-reverse y debe de haber multilinea o mejor dicho
+  que los elementos hallan desbordado
+  flex-start se alinean en la parte superior del contenedor
+  flex-end se alinean en la parte inferior del contenedor
+  center se alinean en el centro
+  stretch los elementos ocupan todo el alto del contenedor
+  space-between manda los elementos a la parte superior e inferior 
+  y deja un espacio en el centro
+  space-around  distribuyen los elementos pero ahora dejando un espacio
+  entre los elementos y el contenedor
+  */
+  align-content: flex-start;
+  /* Dar espacios entre los elementos */
+  gap: 20px;
+  background-color: brown;
+}
+.item-1 {
+  color: azure;
+  /* height: 100px; */
+  /* El orden en que se va a mostrar */
+  /* order: 0; */
+  /*Se le asigna el tamaño a ese elemento y se ajusta al tamaño de la pagina*/
+  flex-grow: 2;
+  /* Cantidad en que se van a contraer a la hora de ajustarse la pagina*/
+  flex-shrink: 1;
+  /* nos permite asignarle un tamaño y este crece hasta el tamaño del contenedor sin desbordarse */
+  flex-basis: auto;
+  /* Para alinear cada elemento 
+  flex-start se alinean en la parte superior del contenedor
+  flex-end se alinean en la parte inferior del contenedor
+  center se alinean en el centro
+  stretch los elementos ocupan todo el alto del contenedor
+  baseline para alinearlo a la linea base de la pagina*/
+  align-self: flex-end;
+  background-color: aqua;
+}
+.item-2 {
+  color: blueviolet;
+  background-color: beige;
+  /* estilos de borde solid linea solida 
+  dotted linea con puntos
+  dashed linea discontinua
+  double: Dos líneas paralelas.
+groove: Apariencia en relieve, que parece estar tallada en el fondo.
+ridge: Similar a groove, pero parece sobresalir del fondo.
+inset: Apariencia en relieve, como si estuviera incrustada en el fondo.
+outset: Similar a inset, pero parece sobresalir del fondo.
+  */
+  border: 3px solid black;
+  margin: 30px 0;
+  /* height: 70px; */
+  /* order: 2; */
+  flex-grow: 1;
+  flex-shrink: 5;
+}
+.item-3 {
+  color: blue;
+  background-color: aqua;
+  /* height: 200px; */
+  order: 3;
+  flex-grow: 2;
+  flex-shrink: 2;
+}
+.item-4 {
+  color: bisque;
+  background-color: black;
+  /* height: 150px; */
+  /* order: 1; */
+  flex-grow: 1;
+  flex-shrink: 3;
+}
